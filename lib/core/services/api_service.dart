@@ -1,6 +1,4 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-final apiServiceProvider = Provider<ApiService>((ref) => ApiService());
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ApiService {
   Future<bool> login(String username, String password) async {
