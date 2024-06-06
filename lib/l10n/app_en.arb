@@ -1,0 +1,18 @@
+{
+  "homePageTitle": "Home",
+  "@homePageTitle": {
+    "description": "Home page title"
+    },
+  "goToNextPage": "Go To Next Page",
+  "@goToNextPage": {
+    "description": "Title used to go to the Next Page"
+    },
+  "increment": "Increment",
+  "@increment": {
+    "description": "Title used on increment button"
+    },
+  "goToHomePage": "Go to Home Page",
+  "@goToHomePage": {
+    "description": "Title used to go to the Home Page"
+    }
+}

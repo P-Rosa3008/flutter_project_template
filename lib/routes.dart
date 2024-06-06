@@ -4,5 +4,5 @@ import 'features/home/view/home_screen.dart';
 
 final Map<String, WidgetBuilder> appRoutes = {
   '/': (context) => HomeScreen(),
-  '/counter': (context) => CounterPage(),
+  '/counterPage': (context) => CounterPage(),
 };

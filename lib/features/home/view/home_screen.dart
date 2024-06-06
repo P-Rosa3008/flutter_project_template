@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/features/counter/view/counter_page.dart';
+import 'package:flutter_project_template/core/helpers/context_helpers.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template/core/providers/auth_cubit.dart';
@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       create: (context) => GetIt.I<AuthCubit>(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Home'),
+          title: Text(context.localizations!.homePageTitle),
         ),
         body: Center(
           child: Column(
@@ -19,14 +19,9 @@ class HomeScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CounterPage(),
-                    ),
-                  );
+                  Navigator.pushNamed(context, '/counterPage');
                 },
-                child: Text('Go to Next Page'),
+                child: Text(context.localizations!.goToNextPage),
               ),
             ],
           ),
