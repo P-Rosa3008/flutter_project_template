@@ -1,3 +1,3 @@
-class Feature1Repository {
+class CounterRepository {
   // Implement repository methods here
 }

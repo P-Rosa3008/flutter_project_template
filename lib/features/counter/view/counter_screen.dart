@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/feature1_state.dart';
+import '../bloc/counter_state.dart';
 
-class Feature1Screen extends StatelessWidget {
+class CounterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,14 +13,14 @@ class Feature1Screen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            BlocBuilder<Feature1Cubit, int>(
+            BlocBuilder<CounterCubit, int>(
               builder: (context, count) {
                 return Text('$count',
                     style: Theme.of(context).textTheme.headlineSmall);
               },
             ),
             ElevatedButton(
-              onPressed: () => context.read<Feature1Cubit>().increment(),
+              onPressed: () => context.read<CounterCubit>().increment(),
               child: Text('Increment'),
             ),
             ElevatedButton(

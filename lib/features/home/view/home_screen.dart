@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/features/feature1/view/feature1_page.dart';
+import 'package:flutter_project_template/features/counter/view/counter_page.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_project_template/core/providers/auth_cubit.dart';
@@ -22,13 +22,12 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Feature1Page(),
+                      builder: (context) => CounterPage(),
                     ),
                   );
                 },
                 child: Text('Go to Next Page'),
               ),
-              // Add more buttons for other features here
             ],
           ),
         ),
