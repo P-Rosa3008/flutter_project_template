@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import '../services/api_service.dart';
+import '../services/auth_api_service.dart';
 
 class AuthState {
   final bool isAuthenticated;
@@ -7,14 +7,14 @@ class AuthState {
 }
 
 class AuthCubit extends Cubit<AuthState> {
-  final ApiService apiService;
+  final AuthApiService apiService;
 
   AuthCubit({required this.apiService})
       : super(AuthState(isAuthenticated: false));
 
   Future<void> login(String username, String password) async {
-    final success = await apiService.login(username, password);
-    if (success) {
+    await apiService.signInUserWithEmailAndPassword(username, password);
+    if (apiService.isUserSignedIn()) {
       emit(AuthState(isAuthenticated: true));
     }
   }
